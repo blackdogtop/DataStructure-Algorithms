@@ -40,7 +40,7 @@ class Solution:
             space:
         ref: https://leetcode-cn.com/problems/implement-strstr/solution/kmp-suan-fa-xiang-jie-by-labuladong/
         """
-        pass  # TODO
+        pass  # TODO: kmp algorithm
 
 
 if __name__ == '__main__':
