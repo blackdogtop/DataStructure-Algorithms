@@ -27,7 +27,7 @@ class Solution:
 
         def backTrack(nums: list, path: list, res: list, begin: int):
             res.append(path[:])
-            if len(path) == len(nums): return
+            # if len(path) == len(nums): return
             for i in range(begin, len(nums)):
                 path.append(nums[i])
 
