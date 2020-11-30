@@ -26,7 +26,7 @@ class Solution:
         """
 
         def backTrack(nums: list, path: list, res: list, begin: int):
-            res.append(path[:])
+            res.append(path[:])  # shallow copy, without change any thing when the path append/pop element
             # if len(path) == len(nums): return
             for i in range(begin, len(nums)):
                 path.append(nums[i])
