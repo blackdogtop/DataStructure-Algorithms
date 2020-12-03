@@ -8,4 +8,5 @@
 
 ## Binary Tree
 [144. 二叉树的前序遍历](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/preorderTraversal.py) <br/>
-[94. 二叉树的中序遍历](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/inorderTraversal.py)
+[94. 二叉树的中序遍历](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/inorderTraversal.py) <br/>
+[145. 二叉树的后序遍历](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/postorderTraversal.py)
