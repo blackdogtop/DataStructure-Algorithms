@@ -6,9 +6,9 @@ class Tree:
         self.data = data
         self.left = left
         self.right = right
-        
 
-class Iteration:
+
+class Traverse:
     def preOrder(self, root: Tree):
         """pre-order: root - left - right"""
         if not root: return
@@ -81,14 +81,14 @@ if __name__ == '__main__':
     node2.left = node4
     node2.right = node5
 
-    i = Iteration()
+    t = Traverse()
 
     # recursion
-    i.preOrder(node1)
-    i.inOrder(node1)
-    i.postOrder(node1)
+    t.preOrder(node1)
+    t.inOrder(node1)
+    t.postOrder(node1)
 
     # non-recursion
-    i.preOrderNonRecursion(node1)
-    i.inOrderNonRecursion(node1)
-    i.postOrderNonRecursion(node1)
+    t.preOrderNonRecursion(node1)
+    t.inOrderNonRecursion(node1)
+    t.postOrderNonRecursion(node1)
