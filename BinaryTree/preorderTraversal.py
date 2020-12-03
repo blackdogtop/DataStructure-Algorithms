@@ -1,7 +1,15 @@
 #!usr/bin/env python
 # -*- coding: utf-8 -*-
 from typing import List
+"""
+https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
 
+144. 二叉树的前序遍历
+给你二叉树的根节点 root ，返回它节点值的 前序 遍历。
+
+输入：root = [1,null,2,3]
+输出：[1,2,3]
+"""
 
 class TreeNode:
     """Definition for a binary tree node"""
