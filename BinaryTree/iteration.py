@@ -1,12 +1,12 @@
 #!usr/bin/env python
-# -*- coding: utf-8 -*_
+# -*- coding: utf-8 -*-
 
 class Tree:
     def __init__(self, data, left=None, right=None):
         self.data = data
         self.left = left
         self.right = right
-
+        
 
 class Iteration:
     def preOrder(self, root: Tree):
