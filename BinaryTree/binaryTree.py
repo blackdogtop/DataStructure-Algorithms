@@ -68,6 +68,16 @@ class Traverse:
             else:
                 root = None  # 输出又子树的条件下将root置为None
 
+    def bfs(self, root: Tree):
+        """Breadth First Search"""
+        if not root: return 0
+        stack = [root]
+        while stack:
+            currentNode = stack.pop(0)
+            print(currentNode.data, end=" ")
+            if currentNode.left: stack.append(currentNode.left)
+            if currentNode.right: stack.append(currentNode.right)
+
 
 if __name__ == '__main__':
     node1 = Tree(1)
@@ -84,11 +94,21 @@ if __name__ == '__main__':
     t = Traverse()
 
     # recursion
+    print('pre-order:', end=" ")
     t.preOrder(node1)
+    print('in-order:', end=" ")
     t.inOrder(node1)
+    print('post-order:', end=" ")
     t.postOrder(node1)
 
     # non-recursion
+    print('pre-order:', end=" ")
     t.preOrderNonRecursion(node1)
+    print('in-order:', end=" ")
     t.inOrderNonRecursion(node1)
+    print('post-order:', end=" ")
     t.postOrderNonRecursion(node1)
+
+    # bfs
+    print('bfs:', end=" ")
+    t.bfs(node1)
