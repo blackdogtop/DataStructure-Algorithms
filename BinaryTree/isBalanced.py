@@ -1,6 +1,5 @@
 #!usr/bin/env python
 # -*- coding: utf-8 -*-
-import math
 """
 https://leetcode-cn.com/problems/balanced-binary-tree/
 
@@ -101,9 +100,3 @@ if __name__ == '__main__':
 
     res2 = s.isBalancedOptimised(node3)
     print(res2)
-
-
-
-
-
-
