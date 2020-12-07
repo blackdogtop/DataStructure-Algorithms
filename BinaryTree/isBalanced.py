@@ -31,7 +31,7 @@ class Solution:
         """
         Complexity:
             time: O(NlogN) - 广度优先O(N) 最大深度O(logN)
-            space: O(height) 最坏O(N)
+            space: 最坏O(N) ?
         """
         def maxDepth(root: TreeNode):
             """
