@@ -37,7 +37,7 @@ class Solution:
     def bfs(self, root: TreeNode):
         """
         Complexity:
-            time: 最坏O(n * n)? - pop(0)占用O(n)的时间复杂度
+            time: 最坏O(NlogN) - pop(0)占用O(m)的时间复杂度
             space: 最坏O(n)
         """
         if not root: return 0
