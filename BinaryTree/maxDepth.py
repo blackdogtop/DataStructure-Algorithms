@@ -27,7 +27,7 @@ class Solution:
         """
         Complexity:
             time: O(n)
-            space: O(1)
+            space: O(height) - height为二叉树的最大深度 函数递归需要栈空间 栈空间取决于递归次数
         """
         if not root: return 0
         leftDepth = self.maxDepth(root.left)

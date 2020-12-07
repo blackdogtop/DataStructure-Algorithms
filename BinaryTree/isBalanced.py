@@ -31,14 +31,14 @@ class Solution:
         """
         Complexity:
             time: O(NlogN) - 广度优先O(N) 最大深度O(logN)
-            space: 最坏O(n)
+            space: O(height) 最坏O(N)
         """
         def maxDepth(root: TreeNode):
             """
             以root为根结点的二叉树最大高度
             complexity:
-                time: O(logN)
-                space: O(1)
+                time: O(M) - M为以root为根的节点个数
+                space: O(height)
             """
             if not root: return 0
             leftDepth = maxDepth(root.left)
@@ -62,11 +62,14 @@ class Solution:
         """
         Complexity:
             time: O(n)
-            space: O(1)
+            space: O(height)
         """
         def maxDepth(root: TreeNode):
             """
             在平衡树的条件下以root为根结点的二叉树最大深度
+            Complexity:
+                time: O(n)
+                space: O(height)
             :return depth: 如果是平衡树则返回该节点的最大深度 否则返回-1
             """
             if not root: return 0
