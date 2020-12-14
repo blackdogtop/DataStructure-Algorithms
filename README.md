@@ -13,3 +13,5 @@
 [145. 二叉树的后序遍历](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/postorderTraversal.py) <br/>
 [104. 二叉树的最大深度](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/maxDepth.py) <br/>
 [110. 平衡二叉树](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/isBalanced.py) <br/>
+[124. 二叉树中的最大路径和](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/maxPathSum.py) <br/>
+[236. 二叉树的最近公共祖先](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/lowestCommonAncestor.py) <br/>
