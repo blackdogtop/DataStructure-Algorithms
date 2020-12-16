@@ -28,6 +28,11 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        """
+        Complexity:
+            time: O(NlogN) - pop(0)时间复杂度O(n)
+            space: O(N)
+        """
         res = []
         if not root: return res
         stack = [root]
