@@ -18,3 +18,4 @@
 [102. 二叉树的层序遍历](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/levelOrder.py) <br/>
 [103. 二叉树的锯齿形层次遍历](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/zigzagLevelOrder.py) <br/>
 [98. 验证二叉搜索树](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/isValidBST.py) <br/>
+[701. 二叉搜索树中的插入操作]https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/insertIntoBST.py) <br/>
