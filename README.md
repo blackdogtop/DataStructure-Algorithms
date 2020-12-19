@@ -22,3 +22,4 @@
 
 ## Linked List <br/>
 [83.  删除排序链表中的重复元素](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/deleteDuplicates.py) <br/>
+[82. 删除排序链表中的重复元素 II](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/deleteDuplicates2.py) <br/>
