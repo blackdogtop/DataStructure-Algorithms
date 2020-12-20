@@ -21,10 +21,26 @@ class Solution:
     def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
         """
         Complexity:
-            time:
-            space:
+            time: O(n) - n为参数
+            space: O(n) - n为参数
         :param m, n: 1 <= m <= n <= 链表长度
         """
+        def reverser(head, n: int):
+            """反转链表前n个"""
+            nonlocal successor
+            if n == 1:
+                successor = head.next
+                return head
+            last = reverser(head.next, n-1)
+            head.next.next = head
+            head.next = successor
+            return last
+
+        successor = None
+        if m == 1:
+            return reverser(head, n)
+        head.next = self.reverseBetween(head.next, m-1, n-1)
+        return head
 
 
 if __name__ == '__main__':
@@ -34,12 +50,12 @@ if __name__ == '__main__':
     node4 = ListNode(4)
 
     node1.next = node2
-    # node2.next = node3
-    # node3.next = node4
+    node2.next = node3
+    node3.next = node4
 
     s = Solution()
-    res = s.reverseBetween(node1, 2, 3)
+    res = s.reverseBetween(node1, 2, 4)
     while res:
-        print(res.val)
+        print(res.val, end=' ')
         res = res.next
 
