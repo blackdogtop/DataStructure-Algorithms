@@ -61,8 +61,8 @@ class Solution:
         """
         递归
         Complexity:
-            time:
-            space:
+            time: O(n)
+            space: O(n)
         """
         if not head.next: return head
         last = self.reverseList3(head.next)
@@ -84,9 +84,9 @@ if __name__ == '__main__':
     node4.next = node5
 
     s = Solution()
-    res = s.reverseList(node1)
-    # res = s.reverseList2(node1)
-    # res = s.reverseList3(node1)
+    res = s.reverseList(node1)  # 栈方法
+    # res = s.reverseList2(node1)  # 双指针
+    # res = s.reverseList3(node1)  # 递归
     while res:
         print(res.val, end=' ')
         res = res.next
