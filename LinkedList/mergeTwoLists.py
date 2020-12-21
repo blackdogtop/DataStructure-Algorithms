@@ -40,7 +40,7 @@ class Solution:
         if c: a.next = c
         return dummy.next
 
-    def mergeTwoListsIteration(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def mergeTwoListsRecursion(self, l1: ListNode, l2: ListNode) -> ListNode:
         """
         Complexity:
             time: O(l1 + l2)
@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
     s = Solution()
     # res = s.mergeTwoLists(node11, node21)  # 迭代
-    res = s.mergeTwoListsIteration(node11, node21)  # 递归
+    res = s.mergeTwoListsRecursion(node11, node21)  # 递归
     while res:
         print(res.val, end=' ')
         res = res.next
