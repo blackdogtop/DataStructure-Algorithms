@@ -26,3 +26,4 @@
 [206. 反转链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/reverseList.py) <br/>
 [92. 反转链表 II](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/reverseBetween.py) <br/>
 [21. 合并两个有序链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/mergeTwoLists.py) <br/>
+[86. 分隔链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/partition.py) <br/>
