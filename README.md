@@ -28,3 +28,4 @@
 [21. 合并两个有序链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/mergeTwoLists.py) <br/>
 [86. 分隔链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/partition.py) <br/>
 [148. 排序链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/sortList.py) <br/>
+[143. 重排链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/reorderList.py) <br/>
