@@ -31,3 +31,4 @@
 [143. 重排链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/reorderList.py) <br/>
 [141. 环形链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/hasCycle.py) <br/>
 [142. 环形链表 II](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/detectCycle.py) <br/>
+[234. 回文链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/isPalindrome.py) <br/>
