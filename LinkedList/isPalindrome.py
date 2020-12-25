@@ -25,7 +25,7 @@ class Solution:
         """
         递归
         Complexity:
-            time: O(N)
+            time: ?
             space: O(N/2)
         """
         def recursion(head, last):
