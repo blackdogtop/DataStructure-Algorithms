@@ -1,6 +1,8 @@
 #!usr/bin/env python
 # -*- coding: utf-8 -*-
 """
+https://leetcode-cn.com/problems/copy-list-with-random-pointer/
+
 给定一个链表，每个节点包含一个额外增加的随机指针，该指针可以指向链表中的任何节点或空节点。
 要求返回这个链表的深拷贝。
 我们用一个由n个节点组成的链表来表示输入/输出中的链表。每个节点用一个[val, random_index]表示：
