@@ -70,6 +70,19 @@ class Solution:
         head.next = None
         return last
 
+    def reverseListMultipleAssign(self, head: ListNode) -> ListNode:
+        """
+        多元赋值
+        Complexity:
+            time: O(n)
+            space: O(1)
+        """
+        cur = head
+        res = None
+        while cur:
+            res, res.next, cur = cur, res, cur.next
+        return res
+
 
 if __name__ == '__main__':
     node1 = ListNode(1)
@@ -84,9 +97,10 @@ if __name__ == '__main__':
     node4.next = node5
 
     s = Solution()
-    res = s.reverseList(node1)  # 栈方法
+    # res = s.reverseList(node1)  # 栈方法
     # res = s.reverseList2(node1)  # 双指针
     # res = s.reverseList3(node1)  # 递归
+    res = s.reverseListMultipleAssign(node1)  # 多元赋值
     while res:
         print(res.val, end=' ')
         res = res.next
