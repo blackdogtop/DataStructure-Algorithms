@@ -23,6 +23,7 @@ class ListNode:
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         """
+        指针 in-place
         Complexity:
             time: O(n)
             space: O(1)
@@ -35,6 +36,67 @@ class Solution:
                 currentNode = currentNode.next
         return head
 
+    def deleteDuplicatesTwoPtrs(self, head: ListNode) -> ListNode:
+        """
+        双指针
+        Complexity:
+            time: O(n)
+            space: O(1)
+        """
+        if not head or not head.next: return head
+
+        dummy = ListNode(-1)
+        dummy.next = head
+        pre, cur = head, head.next
+        while cur:
+            while cur and pre.val == cur.val :
+                cur = cur.next
+            pre.next = cur
+            pre = pre.next
+            cur = cur.next if cur and cur.next else None
+        return dummy.next
+
+    def deleteDuplicatesHash(self, head: ListNode) -> ListNode:
+        """
+        哈希
+        Complexity:
+            time: O(n)
+            space: O(n)
+        """
+        if not head: return head
+
+        hash = dict()
+        p = head
+        while p:
+            hash[p.val] = hash[p.val] + 1 if p.val in hash else 1
+            p = p.next
+
+        dummy = ListNode(-1)
+        pre, cur = dummy, head
+        while cur:
+            while cur and hash[cur.val] > 1:
+                cur = cur.next
+                hash[cur.val] -= 1
+            pre.next = cur
+            cur = cur.next
+            pre = pre.next
+        return dummy.next
+
+    def deleteDuplicatesRecursion(self, head: ListNode) -> ListNode:
+        """
+        递归
+        Complexity:
+            time: O(n)
+            space: O(n)
+        """
+        if not head or not head.next: return head
+        sub = self.deleteDuplicatesRecursion(head.next)
+        if head.val == sub.val:
+            return sub
+        else:
+            head.next = sub
+            return head
+
 
 if __name__ == '__main__':
     node1 = ListNode(1)
@@ -45,7 +107,10 @@ if __name__ == '__main__':
     node2.next = node3
 
     s = Solution()
-    res = s.deleteDuplicates(node1)
+    # res = s.deleteDuplicates(node1)  # in-place
+    # res = s.deleteDuplicatesTwoPtrs(node1)  # 双指针
+    # res = s.deleteDuplicatesHash(node1)  # hash
+    res = s.deleteDuplicatesRecursion(node1)  # 递归
     while res:
-        print(res.val)
+        print(res.val, end=' ')
         res = res.next
