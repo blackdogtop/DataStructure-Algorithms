@@ -25,7 +25,7 @@ class Solution:
         """
         使用哈希表映射链表重复次数
         Complexity:
-            time: O(2n)
+            time: O(n)
             space: O(n)
         """
         if not head: return head
@@ -70,6 +70,25 @@ class Solution:
                 b = b.next
         return dummy.next
 
+    def deleteDuplicatesRecursion(self, head: ListNode) -> ListNode:
+        """
+        递归
+        Complexity:
+            time: O(n)
+            space: O(n)
+        """
+        if not head or not head.next: return head
+
+        if head.val == head.next.val:
+            while head.next and head.val == head.next.val:
+                head.next = head.next.next
+            sub = self.deleteDuplicates(head.next)
+            return sub
+        else:
+            sub = self.deleteDuplicates(head.next)
+            head.next = sub
+            return head
+
 
 if __name__ == '__main__':
     node1 = ListNode(1)
@@ -80,13 +99,9 @@ if __name__ == '__main__':
     node2.next = node3
 
     s = Solution()
-    res = s.deleteDuplicates(node1)
-    while res:
-        print(res.val, end=' ')
-        res = res.next
-    print()
-
-    res = s.deleteDuplicates2(node1)
+    # res = s.deleteDuplicates(node1)  # hash
+    # res = s.deleteDuplicates2(node1)  # 双指针
+    res = s.deleteDuplicatesRecursion(node1)  # 递归
     while res:
         print(res.val, end=' ')
         res = res.next
