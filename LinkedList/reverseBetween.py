@@ -20,6 +20,7 @@ class ListNode:
 class Solution:
     def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
         """
+        递归 + 递归反转前N
         Complexity:
             time: O(n) - n为参数
             space: O(n) - n为参数
@@ -42,6 +43,55 @@ class Solution:
         head.next = self.reverseBetween(head.next, m-1, n-1)
         return head
 
+    def reverseBetweenIter(self, head: ListNode, m: int, n: int) -> ListNode:
+        """
+        递归 + 迭代链表前N
+        Complexity:
+            time: O(n) - n为参数
+            space: O(m) - m为参数
+        """
+        def reverseN(head, N):
+            p, n = head, N
+            while n > 1:
+                p = p.next
+                n -= 1
+            pos1 = p.next
+            pos2 = head
+            p.next = None
+            while pos2:
+                pos3 = pos2.next
+                pos2.next = pos1
+                pos1 = pos2
+                pos2 = pos3
+            return pos1
+
+        if m == 1:
+            return reverseN(head, n)
+        head.next = self.reverseBetween(head.next, m-1, n-1)
+        return head
+
+    def reverseBetweenIter2(self, head: ListNode, m: int, n: int) -> ListNode:
+        """
+        迭代
+        Complexity:
+            time: O(n) - n为参数
+            space: O(1)
+        """
+        dummy = ListNode(-1)
+        pre = dummy
+        pre.next = head
+
+        for _ in range(1, m):
+            pre = pre.next
+
+        head = pre.next
+        for _ in range(m, n):
+            nex = head.next
+            head.next = nex.next
+            nex.next = pre.next
+            pre.next = nex
+        return dummy.next
+
 
 if __name__ == '__main__':
     node1 = ListNode(1)
@@ -54,7 +104,9 @@ if __name__ == '__main__':
     node3.next = node4
 
     s = Solution()
-    res = s.reverseBetween(node1, 2, 4)
+    # res = s.reverseBetween(node1, 2, 4)  # 递归 + 递归反转前N
+    # res = s.reverseBetweenIter(node1, 2, 4)  # 递归 + 迭代链表前N
+    res = s.reverseBetweenIter2(node1, 2, 4)  # 迭代
     while res:
         print(res.val, end=' ')
         res = res.next
