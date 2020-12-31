@@ -22,7 +22,7 @@ class Solution:
         """
         进栈方法
         Complexity:
-            time: O(2n)
+            time: O(n)
             space: O(n)
         """
         if not head: return head
@@ -30,14 +30,15 @@ class Solution:
         stack = []
         currentNode = head
         while currentNode:
-            stack.append(currentNode.val)
+            stack.append(currentNode)
             currentNode = currentNode.next
 
         dummy = ListNode(-1)
         currentNode = dummy
         while stack:
-            currentNode.next = ListNode(stack.pop())
+            currentNode.next = stack.pop()
             currentNode = currentNode.next
+        currentNode.next = None
         return dummy.next
 
     def reverseList2(self, head: ListNode) -> ListNode:
@@ -97,10 +98,10 @@ if __name__ == '__main__':
     node4.next = node5
 
     s = Solution()
-    # res = s.reverseList(node1)  # 栈方法
-    # res = s.reverseList2(node1)  # 双指针
+    # res = s.reverseList(node1)  # stack
+    res = s.reverseList2(node1)  # 双指针
     # res = s.reverseList3(node1)  # 递归
-    res = s.reverseListMultipleAssign(node1)  # 多元赋值
+    # res = s.reverseListMultipleAssign(node1)  # 多元赋值
     while res:
         print(res.val, end=' ')
         res = res.next
