@@ -22,53 +22,40 @@ class ListNode:
 class Solution:
     def reorderList(self, head: ListNode) -> None:
         """
-        Do not return anything, modify head in-place instead.
+        中断 + 逆序 + 拼接
         Complexity:
-            time: O(3/2N) - N为链表节点数
+            time: O(N) - 线性
             space: O(1)
         """
-        def getMid():
-            """获取链表中点并将其从中点处切断"""
-            nonlocal head
-            low, fast = head, head.next
-            while fast and fast.next:
-                low = low.next
-                fast = fast.next.next
-            h2 = low.next  # 第二段头节点
-            low.next = None
-            return h2
+        if not head or not head.next: return head
 
-        def reverse(head):
-            """逆序链表"""
-            ptr1 = None
-            ptr2 = head
-            while ptr2:
-                ptr3 = ptr2.next
-                ptr2.next = ptr1
-                ptr1 = ptr2
-                ptr2 = ptr3
-            return ptr1
+        slow, fast = head, head.next
+        while fast and fast.next: slow, fast = slow.next, fast.next.next
+        h2 = slow.next
+        slow.next = None
 
-        def reorder(ptr1, ptr2):
-            """重排链表"""
-            while ptr1 and ptr2:
-                n1 = ptr1.next
-                n2 = ptr2.next
-                ptr1.next = ptr2
-                ptr2.next = n1
-                ptr1 = n1
-                ptr2 = n2
+        dummy = ListNode(-1)
+        dummy.next = h2
+        pre, cur = dummy, h2
+        while cur.next:
+            nex = cur.next
+            cur.next = nex.next
+            nex.next = pre.next
+            pre.next = nex
+        h2 = dummy.next
 
-        if not head: return head
-        h2 = getMid()  # 第二段头节点
-        h2 = reverse(h2)  # 逆序
-        reorder(head, h2)  # 重排链表
+        while head and h2:
+            n1, n2 = head.next, h2.next
+            head.next = h2
+            h2.next = n1
+            head = n1
+            h2 = n2
 
     def reorderListStack(self, head: ListNode) -> None:
         """
         栈存储
         Complexity:
-            time: O(NlogN) ? - N为链表节点数
+            time: O(N) - 线性
             space: O(N)
         """
         if not head: return head
@@ -79,12 +66,14 @@ class Solution:
             stack.append(h)
             h = h.next
 
-        while stack:
-            head.next = stack.pop()
+        begin, end = 0, len(stack) - 1
+        while begin <= end:
+            head.next = stack[end]
             head = head.next
-            if stack:
-                head.next = stack.pop(0)
-                head = head.next
+            end -= 1
+            head.next = stack[begin]
+            head = head.next
+            begin += 1
         head.next = None
 
     def reorderListRecursion(self, head: ListNode) -> None:
