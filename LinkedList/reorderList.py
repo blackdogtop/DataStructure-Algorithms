@@ -27,7 +27,7 @@ class Solution:
             time: O(N) - 线性
             space: O(1)
         """
-        if not head or not head.next: return head
+        if not head or not head.next: return
 
         slow, fast = head, head.next
         while fast and fast.next: slow, fast = slow.next, fast.next.next
@@ -58,7 +58,7 @@ class Solution:
             time: O(N) - 线性
             space: O(N)
         """
-        if not head: return head
+        if not head: return
 
         stack = []
         h = head.next
@@ -80,8 +80,8 @@ class Solution:
         """
         递归
         Complexity:
-            time: O(N/2logN) ? - N为链表节点个数
-            space: O(N/2) ?
+            time: ?
+            space: ?
         """
         if not head or not head.next or not head.next.next: return
         cur = head
