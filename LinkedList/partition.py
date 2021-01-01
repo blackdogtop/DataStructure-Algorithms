@@ -32,12 +32,13 @@ class Solution:
         c = head
         while c:
             if c.val < x:
-                a.next = ListNode(c.val)
+                a.next = c
                 a = a.next
             else:
-                b.next = ListNode(c.val)
+                b.next = c
                 b = b.next
             c = c.next
+        b.next = None
         a.next = dummy2.next  # 连接两个哑节点所在链表
         return dummy1.next
 
