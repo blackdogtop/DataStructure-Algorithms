@@ -27,17 +27,16 @@ class ListNode:
 class Solution:
     def sortList(self, head: ListNode) -> ListNode:
         """
-        merge sort 归并排序
+        递归归并排序
         Complexity:
-            time: O(NlogN) ?
+            time: O(NlogN)
             space: O(logN)
         """
         if not head or not head.next: return head
 
         # 获取链表中点
         slow, fast = head, head.next
-        while fast and fast.next:
-            slow, fast = slow.next, fast.next.next
+        while fast and fast.next: slow, fast = slow.next, fast.next.next
         mid = slow.next
         slow.next = None
 
