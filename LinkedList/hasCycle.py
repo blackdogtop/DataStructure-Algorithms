@@ -32,8 +32,8 @@ class Solution:
     def hasCycle(self, head: ListNode) -> bool:
         """
         Complexity:
-            time: O(NlogN) - n节点个数
-            sapce: O(n)
+            time: O(N)?
+            space: O(N)
         """
         stack = []
         while head:
