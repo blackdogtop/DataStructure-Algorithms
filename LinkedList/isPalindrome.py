@@ -25,30 +25,26 @@ class Solution:
         """
         递归
         Complexity:
-            time: ?
-            space: O(N/2)
+            time: O(N)
+            space: O(N)
         """
-        def recursion(head, last):
-            end = head
-            while end.next != last:
-                end = end.next
-            if head.next == end or head.next.next == end:
-                if head.val == end.val: return True
-                else: return False
-            if end.val != head.val: return False
-            subListNode = recursion(head.next, end)
-            if not subListNode: return False
-            return True
-
         if not head or not head.next: return True
-        res = recursion(head, None)
-        return res
+
+        lastSec = head  # 倒数第二个节点
+        while lastSec.next.next:
+            lastSec = lastSec.next
+        last = lastSec.next
+        lastSec.next = None
+
+        if head.val != last.val: return False
+        if not self.isPalindrome(head.next): return False
+        return True
 
     def isPalindromeStack(self, head: ListNode) -> bool:
         """
         栈
         Complexity:
-            time: O(NlogN)
+            time: O(N)
             space: O(N)
         """
         if not head or not head.next: return True
@@ -56,12 +52,12 @@ class Solution:
         while head:
             stack.append(head.val)
             head = head.next
-        head, end = stack.pop(0), stack.pop()
-        while head is not None and end is not None:
-            if head != end: return False
-            if stack: head = stack.pop(0)
-            if stack: end = stack.pop()
-            else: end = None
+
+        begin, end = 0, len(stack)-1
+        while begin < end:
+            if stack[begin] != stack[end]: return False
+            begin += 1
+            end -= 1
         return True
 
     def isPalindromeTwoptrs(self, head: ListNode) -> bool:
@@ -92,6 +88,35 @@ class Solution:
             ptr1, ptr2 = ptr1.next, ptr2.next
         return True
 
+    def isPalindromeReverse(self, head: ListNode) -> bool:
+        """
+        中断+反转+比较
+        Complexity:
+            time: O(N)
+            space: O(1)
+        """
+        if not head or not head.next: return True
+
+        slow, fast = head, head.next
+        while fast and fast.next: slow, fast = slow.next, fast.next.next
+        right = slow.next
+        slow.next = None
+
+        pre = None
+        while right:
+            nex = right.next
+            right.next = pre
+            pre = right
+            right = nex
+        right = pre
+
+        while right and head:
+            if right.val != head.val: return False
+            right = right.next
+            head = head.next
+        return True
+
+
     # TODO: 哈希算法(Hash function)
 
 
@@ -109,5 +134,6 @@ if __name__ == '__main__':
 
     s = Solution()
     # print(s.isPalindrome(node1))  # 递归
-    # print(s.isPalindromeStack(node1))  # 栈
-    print(s.isPalindromeTwoptrs(node1))  # 双指针
+    print(s.isPalindromeStack(node1))  # 栈
+    # print(s.isPalindromeTwoptrs(node1))  # 双指针
+    # print(s.isPalindromeReverse(node1))  # 中断+反转+比较
