@@ -33,3 +33,6 @@
 [142. 环形链表 II](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/detectCycle.py) <br/>
 [234. 回文链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/isPalindrome.py) <br/>
 [138. 复制带随机指针的链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/copyRandomList.py) <br/>
+
+## Stack and Queue <br/>
+[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)<br/>
