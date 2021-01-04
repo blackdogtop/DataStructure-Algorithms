@@ -35,4 +35,4 @@
 [138. 复制带随机指针的链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/LinkedList/copyRandomList.py) <br/>
 
 ## Stack and Queue <br/>
-[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)<br/>
+[155. 最小栈](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/StackAndQueue/MinStack.py) <br/>
