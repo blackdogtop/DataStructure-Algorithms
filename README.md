@@ -37,3 +37,4 @@
 ## Stack and Queue <br/>
 [155. 最小栈](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/StackAndQueue/MinStack.py) <br/>
 [150. 逆波兰表达式求值](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/StackAndQueue/evalRPN.py) <br/>
+[394. 字符串解码](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/StackAndQueue/decodeString.py) <br/>
