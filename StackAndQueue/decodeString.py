@@ -19,10 +19,10 @@ class Solution:
         Stack
         Complexity:
             time: O(n)
-            space: O(n)
+            space: O(n) - 最差
         """
         res = ""
-        stack = []
+        stack = []  # a stack is used to store last res and current multiplier
         multiply = 0
         for cur in s:
             if cur.isdigit():
@@ -39,15 +39,36 @@ class Solution:
 
     def decodeStringRecursion(self, s: str) -> str:
         """
-        递归
+        使用递归返回方括号内的string
         Complexity:
-            time:
-            space:
+            time: O(n)
+            space: O(n) - 最差
         """
-        # todo
+        def recursion(s, i):
+            """
+            :param s: str
+            :param i: index
+            """
+            res, multi = "", 0
+            while i < len(s):
+                if s[i].isdigit():
+                    multi = multi * 10 + int(s[i])
+                elif s[i] == '[':
+                    temp, i = recursion(s, i + 1)
+                    res = res + multi * temp
+                    multi = 0
+                elif s[i].isalpha():
+                    res += s[i]
+                else:
+                    return res, i
+                i += 1
+            return res
+
+        return recursion(s, 0)
 
 
 if __name__ == '__main__':
-    string = "100[a]2[bc]"
+    string = "3[a2[b]]"
     s = Solution()
-    print(s.decodeString(string))
+    print(s.decodeString(string))  # stack
+    print(s.decodeStringRecursion(string))  # recursion
