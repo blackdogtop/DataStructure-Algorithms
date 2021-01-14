@@ -39,7 +39,7 @@ class Solution:
         """
         双指针
         Complexity:
-            time: O((m-n)n) - 最差
+            time: O((m-n)n) - 最差; m - len(haystack) n- len(needle)
             space: O(1)
         """
         if not needle: return 0
