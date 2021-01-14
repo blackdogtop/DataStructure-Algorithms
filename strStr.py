@@ -15,37 +15,61 @@ https://leetcode-cn.com/problems/implement-strstr/
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         """
-        Iterate haystack and judge equation
+        逐一比较子字符串
         complexity:
-            time: O((n-l)l)     n - len(haystack) l - len(needle)
+            time: O((m-n)n)     m - len(haystack) n- len(needle)
             space: O(1)
         """
         def isEqual(haystack: str, needle: str) -> bool:
             """time complexity: O(n)"""
-            if len(haystack) != len(needle): return False
-            for i in range(len(haystack)):
-                if haystack[i] != needle[i]: return False
+            haystackLength = len(haystack)
+            for i in range(haystackLength):
+                if haystack[i] != needle[i]:
+                    return False
             return True
 
-        for i in range(0, len(haystack)-len(needle)+1):
-            if haystack[i:i+len(needle)] == needle: return i  # 判断相等占用len(needle)时间复杂度
-            # if isEqual(haystack[i:i + len(needle)], needle): return i # 字符串比较也就是isEqual函数
+        m = len(haystack)
+        n = len(needle)
+        for i in range(0, m - n + 1):
+            if isEqual(haystack[i: i + n], needle):
+                return i
         return -1
 
-    def kmp(self, haystack: str, needle: str) -> int:
+    def strStrTwoPtrs(self, haystack: str, needle: str) -> int:
         """
-        Knuth–Morris–Pratt algorithm
-        complexity:
-            time:
-            space:
-        ref: https://leetcode-cn.com/problems/implement-strstr/solution/kmp-suan-fa-xiang-jie-by-labuladong/
+        双指针
+        Complexity:
+            time: O((m-n)n) - 最差
+            space: O(1)
         """
-        pass  # TODO: kmp algorithm
+        if not needle: return 0
+        if not haystack: return -1
+        m = len(haystack)
+        n = len(needle)
+        i = 0
+        while i < m:
+            if haystack[i] == needle[0]:
+                equalNum = 0  # 相同元素数
+                j = 0
+                index = i
+                while j < n and i < m:
+                    if haystack[i] != needle[j]:
+                        i = i - equalNum + 1  # 移动指针i至当前位置与相同元素数加一
+                        break
+                    if j == n - 1:
+                        return index
+                    equalNum += 1
+                    i += 1
+                    j += 1
+            else:
+                i += 1
+        return -1
 
 
 if __name__ == '__main__':
-    haystack = 'hello'
-    needle = 'll'
+    haystack = 'mississippi'
+    needle = 'issip'
     s = Solution()
-    res = s.strStr(haystack, needle)
+    # res = s.strStr(haystack, needle)  # 逐一比较子字符串
+    res = s.strStrTwoPtrs(haystack, needle)  # 双指针
     print(res)
