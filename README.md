@@ -38,3 +38,6 @@
 [155. 最小栈](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/StackAndQueue/MinStack.py) <br/>
 [150. 逆波兰表达式求值](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/StackAndQueue/evalRPN.py) <br/>
 [394. 字符串解码](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/StackAndQueue/decodeString.py) <br/>
+
+## [剑指offer](https://github.com/blackdogtop/DataStructure-Algorithms/tree/main/剑指offer) <br/>
+[03. 数组中重复的数字](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/03_findRepeatNumber.py) <br/>
