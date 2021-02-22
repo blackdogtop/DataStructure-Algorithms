@@ -45,3 +45,4 @@
 [05. 替换空格](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/05_replaceSpace.py) <br/>
 [06. 从尾到头打印链表](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/06_reversePrint.py) <br/>
 [07. 重建二叉树](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/07_buildTree.py) <br/>
+[09. 用两个栈实现队列](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/09_CQueue.py) <br/>
