@@ -50,3 +50,4 @@
 [10- II. 青蛙跳台阶问题](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/10_2_numWays.py) <br/>
 [11. 旋转数组的最小数字](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/11_minArray.py) <br/>
 [12. 矩阵中的路径](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/12_exist.py) <br/>
+[13. 机器人的运动范围](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/13_movingCount.py) <br/>
