@@ -1,6 +1,7 @@
 # DataStructure-Algorithms
 
 [88. 合并两个有序数组](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/88_merge.py)
+[165. 比较版本号](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/165_compareVersion.py)
 
 
 ## [String-searching algorithm](https://en.wikipedia.org/wiki/String-searching_algorithm)
