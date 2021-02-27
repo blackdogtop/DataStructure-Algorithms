@@ -77,7 +77,7 @@ class Solution:
         if needleLen > haystackLen: return -1
 
         # 返回Unicode编码的数字
-        unicodeHaystay = lambda i: ord(haystack[i]) - ord('a')
+        unicodeHaystay = lambda i: ord(haystack[i]) - ord('a')  # 转换小写字母unicode的范围从0到25
         unicodeNeedle = lambda i: ord(needle[i]) - ord('a')
 
         # 旋转哈希
