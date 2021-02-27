@@ -1,14 +1,14 @@
 # DataStructure-Algorithms
 
-[88. 合并两个有序数组](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/88_merge.py)
-[165. 比较版本号](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/165_compareVersion.py)
+[88. 合并两个有序数组](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/88_merge.py) <br/>
+[165. 比较版本号](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/165_compareVersion.py) <br/>
 
 
-## [String-searching algorithm](https://en.wikipedia.org/wiki/String-searching_algorithm)
-[28. 实现 strStr](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/28_strStr.py)
+## [String-searching algorithm](https://en.wikipedia.org/wiki/String-searching_algorithm) 
+[28. 实现 strStr](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/28_strStr.py) <br/>
 
 ## Back Track
-[78. 子集](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/78_subsets.py)
+[78. 子集](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/78_subsets.py) <br/>
 
 ## Binary Tree
 [二叉树深度/广度遍历](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/BinaryTree/binaryTree.py) <br/>
