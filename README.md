@@ -58,3 +58,13 @@
 [14- I. 剪绳子](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/14_cuttingRope.py) <br/>
 [15. 二进制中1的个数](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/15_hammingWeight.py) <br/>
 [16. 数值的整数次方](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/剑指offer/16_myPow.py) <br/>
+
+## 排序算法 <br/>
+[冒泡排序](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/SortingAlgorithm/bubbleSort.py) <br/>
+[选择排序](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/SortingAlgorithm/selectionSort.py) <br/>
+[插入排序](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/SortingAlgorithm/insertionSort.py) <br/>
+[堆排序](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/SortingAlgorithm/heapSort.py) <br/>
+[归并排序](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/SortingAlgorithm/mergeSort.py) <br/>
+[快速排序](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/SortingAlgorithm/quickSort.py) <br/>
+[希尔排序](https://github.com/blackdogtop/DataStructure-Algorithms/blob/main/SortingAlgorithm/shellSort.py) <br/>
+
